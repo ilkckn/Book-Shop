@@ -1,0 +1,234 @@
+/* Navbar styles */
+.navbarContainer {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  background-color: #f4f2ee;
+  box-shadow: 0px 8px 16px -4px #b7b7b7af;
+}
+
+.logo img {
+  width: 7rem;
+}
+
+.rightBar .links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.rightBar .links ul li {
+  list-style: none;
+}
+
+.rightBar .links a {
+  text-decoration: none;
+  color: #353535;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-bottom: 0.5rem;
+  border-bottom: transparent;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.rightBar .links a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #353535;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.rightBar .links a:hover,
+.rightBar .links a:focus {
+  color: #949494;
+}
+
+.rightBar .links a:hover::before,
+.rightBar .links a:focus::before {
+  border-bottom: 1px solid #909090;
+  transform: scaleX(1);
+}
+
+.user-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-cart .user, .cart {
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.user-cart .user:hover, .cart:hover {
+  scale: 1.2;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.modalContent input {
+  width: 80%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modalContent button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.modalContent .modalLink {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.username {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logout {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #353535;
+  text-decoration: underline;
+}
+
+.logout:hover {
+  color: #949494;
+}
+
+@media (max-width: 1024px) {
+  .navbarContainer {
+    padding: 0 2rem;
+  }
+
+  .rightBar .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    background-color: #353535;
+  }
+
+  .rightBar .links.active {
+    display: flex;
+  }
+
+  .rightBar .links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .rightBar .links ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rightBar .links a {
+    color: #fff;
+    font-size: 1.8rem;
+  }
+
+  .rightBar .links a::before {
+    border-bottom: 1px solid #fff;
+  }
+
+  .rightBar .links a:hover,
+  .rightBar .links a:focus {
+    color: #b0b0b0;
+  }
+
+  .rightBar .links a:hover::before,
+  .rightBar .links a:focus::before {
+    border-bottom: 1px solid #b0b0b0;
+  }
+
+  .user-cart {
+    gap: 1rem;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}

@@ -1,0 +1,48 @@
+.homeContainer {
+  width: 100%;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  background-image: url(../../assets//bakground//background.jpg);
+}
+
+/* -------------Book Companies------------- */
+
+.bookCompaniesBox {
+  margin-top: 7rem;
+  width: 100%;
+}
+
+.bookCompaniesBox .companies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13rem;
+  background-color: #F4F2EE;
+}
+
+.bookCompaniesBox .companies img {
+  width: 15rem;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 1024px) {
+  .bookCompaniesBox .companies {
+    gap: 0;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1275px) {
+  .bookCompaniesBox .companies {
+    gap: 0;
+    justify-content: space-evenly;
+  }
+}
+
+
+

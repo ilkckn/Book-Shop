@@ -1,0 +1,130 @@
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #1e1e1e;
+  border-bottom: transparent;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.filters button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #1e1e1e;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.filters button:hover,
+.filters button:focus {
+  color: #1e1e1e;
+}
+
+.filters button:hover::before,
+.filters button:focus::before {
+  transform: scaleX(1);
+}
+
+.filters button:active {
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.filters button.active {
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.booksList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 2rem 0;
+  width: 40rem;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 3px;
+  color: #1e1e1e;
+}
+
+.book img {
+  width: 30rem;
+  height: 45rem;
+  border-radius: 3px;
+}
+
+.book h3 {
+  font-family: "Prata", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-top: 1rem;
+}
+
+.book p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.book span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.book .price {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #1e1e1e;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .filters {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,241 @@
+.latestArticles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f5f3;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.latestArticles .latestArticlesHeaders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.latestArticles .latestArticlesHeaders h1 {
+  font-family: "Prata", serif;
+  font-size: 4rem;
+  font-weight: 100;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  position: relative;
+  color: #1e1e1e;
+  padding: 0 3rem;
+}
+
+.latestArticles .latestArticlesHeaders h1:before,
+.latestArticles .latestArticlesHeaders h1:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 500px;
+  height: 1.5px;
+  background-color: #6f6f6f55;
+}
+
+.latestArticles .latestArticlesHeaders h1:before {
+  left: -500px;
+}
+
+.latestArticles .latestArticlesHeaders h1:after {
+  right: -500px;
+}
+
+.latestArticles .latestArticlesHeaders h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.latestArticles .articles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.articlesContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.articlesBox video {
+  width: 37rem;
+  height: 65rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.articlesBox p {
+  font-size: 1.8rem;
+  font-family: "Prata", serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #1e1e1e;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.articlesBox span {
+  display: inline-block;
+  width: 37rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  border-bottom: 1px solid rgba(11, 11, 11, 0.558);
+  padding-bottom: 2rem;
+}
+
+.inspiration {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.inspiration p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Roboto Flex", sans-serif;
+  letter-spacing: 1px;
+}
+
+.inspiration .socialMedias {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.inspiration .socialMedias * {
+  cursor: pointer;
+  color: #1e1e1e;
+  transition: 0.2s all ease-in;
+}
+
+.inspiration .socialMedias .socialFace:hover,
+.socialInstagram:hover,
+.socialTwitter:hover {
+  transform: scale(1.2);
+}
+
+.readAllArticles {
+  position: relative;
+}
+
+.readAllArticles button {
+  width: 24rem;
+  height: 5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+  color: rgb(11, 11, 11);
+  background-color: transparent;
+  border: 1px solid rgb(11, 11, 11);
+  border-radius: 3px;
+  position: relative;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+  text-align: start;
+  padding-left: 2.5rem;
+  margin-top: 5rem;
+}
+
+.readAllArticles .readAllRightArrow {
+  position: absolute;
+  bottom: 1.7rem;
+  left: 20rem;
+  font-size: 1.6rem;
+}
+
+.readAllArticles button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgb(11, 11, 11);
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.readAllArticles button:hover,
+.readAllArticles button:focus {
+  color: white;
+}
+
+.readAllArticles button:hover::before,
+.readAllArticles button:focus::before {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 1024px) {
+  .latestArticles .latestArticlesHeaders h1 {
+    font-size: 4rem;
+  }
+
+  .latestArticles .latestArticlesHeaders h1:before,
+  .latestArticles .latestArticlesHeaders h1:after {
+    opacity: 0;
+  }
+
+  .latestArticles .latestArticlesHeaders h4 {
+    font-size: 1.5rem;
+  }
+
+  .articlesContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .articlesBox {
+    width: 33rem;
+  }
+
+  .articlesBox video {
+    width: 33rem;
+    height: 60rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .articlesBox p {
+    width: 30rem;
+    font-size: 1.4rem;
+    font-family: "Prata", serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #1e1e1e;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .articlesBox span {
+    display: inline-block;
+    width: 30rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgba(11, 11, 11, 0.558);
+    padding-bottom: 2rem;
+  }
+}

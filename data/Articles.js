@@ -1,21 +1,24 @@
-import video1 from "../src/assets/articles/Books To Read.mp4"
-import video2 from "../src/assets/articles/Happy World Book Day.mp4"
-import video3 from "../src/assets/articles/Book Lover Quote.mp4"
+import articles1 from "../src/assets/articles/articles1.jpg"
+import articles2 from "../src/assets/articles/articles2.jpg"
+import articles3 from "../src/assets/articles/articles3.jpg"
 
 export const articles = [
     {
-        video: video1,
+        image: articles1,
         date: "5 june 2024",
-        text: "read your book while traveling"
+        text: "read your book while traveling",
+        date: "2 June 2024"
     },
     {
-        video: video2,
+        image: articles2,
         date: "5 june 2024",
-        text: "let us celebrate by reading a good book!"
+        text: "let us celebrate by reading a good book!",
+        date: "2 June 2024"
     },
     {
-        video: video3,
+        image: articles3,
         date: "5 june 2024",
-        text: "opening a book is like unlocking a door to world."
+        text: "opening a book is like unlocking a door to world.",
+        date: "2 June 2024"
     },
 ]

@@ -102,7 +102,7 @@
 
 .slick-slider .slick-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: -5px;
 }
 
 .slick-slider .slick-dots li button:before {

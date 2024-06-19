@@ -1,6 +1,7 @@
 import React from 'react';
 import "./BestSellingBooks.css"
 import { data } from "../../../data/booksDataShort.js";
+import { NavLink } from 'react-router-dom';
 
 function BestSellingBooks() {
   return (
@@ -24,7 +25,7 @@ function BestSellingBooks() {
             <span>{data[2].price}€</span>
             <div className="buttons">
               <button>buy now</button>
-              <button>see more</button>
+              <button><NavLink to="/shop">see more</NavLink></button>
             </div>
           </div>
         </div>

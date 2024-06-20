@@ -6,6 +6,9 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   background-image: url(../../assets//bakground//background.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* -------------Book Companies------------- */
